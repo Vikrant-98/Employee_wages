@@ -66,7 +66,7 @@ case $choice in
 		;;
 esac
 done
-read -p "1).For Full Time Employee Monthly or 2).For Part Time Employee Monthly o Any key for Exit" choice1
+read -p "1).For Full Time Employee Monthly Wages or 2).For Part Time Employee Monthly o Any key for Exit" choice1
 case $choice1 in
 
 	1)
@@ -90,3 +90,19 @@ case $choice1 in
 		;;
 
 esac
+read -p "1).For Full Time Employee Daily Wages or 2).For Part Time Employee Daily Wages o Any key for Exit" choice1
+case $choice1 in
+case $choice1 in
+
+	1)
+		echo "Daily Wage for Full time Employee is : $fullTime_Day_salary"
+		;;
+	2)
+		echo "Daily Wage for Full time Employee is : $part_Time_Monthly"
+		;;
+	*)
+		salary=0
+		;;
+
+esac
+
