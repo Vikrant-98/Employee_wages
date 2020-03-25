@@ -1,4 +1,17 @@
 #!/bin/bash -x
+
+function Hour()
+{
+
+	if [[ $IsPresent -eq $random_Check && $FullTime -eq $random_Time ]]
+        then
+			emp_Hrs_Full=$(($emp_Hrs_Full + $Emp_Hrs_Full))
+	else
+			emp_Hrs_Half=$(($emp_Hrs_Half + $Emp_Hrs_Half))
+	fi
+
+}
+
 echo "Welcome to Employee Wage problem"
 IsPresent=1
 FullTime=1
@@ -25,7 +38,8 @@ case $choice in
 			((count_full++))
 			if [[ $IsPresent -eq $random_Check && $FullTime -eq $random_Time ]]
         		then
-				emp_Hrs_Full=$(($emp_Hrs_Full + $Emp_Hrs_Full))
+				((count_full++))
+				Hour$()
         			fullTime_Day_salary=$(( $Emp_Hrs_Full * $EmpRate_PerHr ))
 			else
         			echo "Not Present"
@@ -39,7 +53,7 @@ case $choice in
 			if [[ $IsPresent -eq $random_Check && $PartTime -eq $random_Time ]]
 			then
 				((count_half++))
-				emp_Hrs_Half=$(($emp_Hrs_Half + $Emp_Hrs_Half))
+				Hour$()
 	        		partTime_Day_salary=$(( $Emp_Hrs_Half * $EmpRate_PerHr ))
 			else
 	        		echo "Not Present"
