@@ -38,7 +38,6 @@ case $choice in
 			((count_full++))
 			if [[ $IsPresent -eq $random_Check && $FullTime -eq $random_Time ]]
         		then
-				((count_full++))
 				Hour$()
         			fullTime_Day_salary=$(( $Emp_Hrs_Full * $EmpRate_PerHr ))
 			else
@@ -50,9 +49,9 @@ case $choice in
 	2)
 		if [[ $emp_Hrs_Half -le 50 && $count_half -le 20 ]]
 		then
+			((count_half++))
 			if [[ $IsPresent -eq $random_Check && $PartTime -eq $random_Time ]]
 			then
-				((count_half++))
 				Hour$()
 	        		partTime_Day_salary=$(( $Emp_Hrs_Half * $EmpRate_PerHr ))
 			else
